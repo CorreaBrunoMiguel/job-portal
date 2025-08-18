@@ -1,5 +1,5 @@
 import {
-  BrowserRoute as Router,
+  BrowserRouter as Router,
   Routes,
   Route,
   Navigate,
@@ -18,6 +18,8 @@ import JobSeekerDashboard from "./pages/JobSeeker/JobSeekerDashboard";
 import JobDetails from "./pages/JobSeeker/JobDetails";
 import SavedJobs from "./pages/JobSeeker/SavedJobs";
 import UserProfile from "./pages/JobSeeker/UserProfile";
+
+import ProtectedRoute from "./routes/ProtectedRoute";
 
 const App = () => {
   return (
