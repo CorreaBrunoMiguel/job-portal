@@ -4,14 +4,16 @@ import Hero from "./components/Hero";
 import Header from "./components/Header";
 import Features from "./components/Features";
 import Analytics from "./components/Analytics";
+import Footer from "./components/Footer";
 
 const LandingPage = () => {
   return (
-    <div className="mb-[100vh] min-h-screen">
+    <div className="min-h-screen">
       <Header />
       <Hero />
       <Features />
       <Analytics />
+      <Footer />
     </div>
   );
 };
