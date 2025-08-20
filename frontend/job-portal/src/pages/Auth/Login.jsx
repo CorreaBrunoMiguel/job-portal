@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
+import { validateEmail } from "../../utils/helper";
+
 import {
   Mail,
   Lock,
@@ -24,17 +26,6 @@ const Login = () => {
     showPassword: false,
     success: false,
   });
-
-  /* Validation functions */
-  const validateEmail = (email) => {
-    if (!email.trim()) return "Email is required";
-
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if (!emailRegex.test(email)) return "Please enter a valid email address";
-
-    return "";
-  };
 
   const validatePassword = (password) => {
     if (!password) return "Password i required";
