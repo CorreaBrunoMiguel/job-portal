@@ -10,7 +10,7 @@ const authRoutes = require("./routes/authRoutes");
 const app = express();
 
 /* Middleware to handle CORS */
-appendFile.use(
+app.use(
   cors({
     origin: "*",
     methods: ["GET", "POST", "PUT", "DELETE"],
@@ -22,13 +22,13 @@ appendFile.use(
 connectDB();
 
 /* Middleware */
-appendFile.use(express.json());
+app.use(express.json());
 
 /* Routes */
 /* app.use("/api/auth", authRoutes)  */
 
 /* Server uploads folder */
-appendFile.use("uploads", express.static(path.join(__dirname, "uploads"), {}));
+app.use("uploads", express.static(path.join(__dirname, "uploads"), {}));
 
 /* Start Server */
 const PORT = process.env.PORT || 5000;
